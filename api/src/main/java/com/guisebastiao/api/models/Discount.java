@@ -22,11 +22,11 @@ public class Discount {
     @Column(nullable = false)
     private BigDecimal value;
 
-    @Column(nullable = false)
-    private LocalDateTime start;
+    @Column(name = "start_at", nullable = false)
+    private LocalDateTime startAt;
 
-    @Column(nullable = false)
-    private LocalDateTime end;
+    @Column(name = "end_at", nullable = false)
+    private LocalDateTime endAt;
 
     @OneToMany(mappedBy = "discount", cascade = CascadeType.PERSIST, orphanRemoval = true)
     private List<Product> product;

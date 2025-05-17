@@ -29,4 +29,8 @@ public class ItemOrder {
     @MapsId("productId")
     @JoinColumn(name = "product_id", nullable = false)
     private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private Order order;
 }

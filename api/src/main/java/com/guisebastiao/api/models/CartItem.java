@@ -17,12 +17,16 @@ public class CartItem {
     private Integer quantity;
 
     @ManyToOne
-    @MapsId("cartId")
-    @JoinColumn(name = "cart_id")
-    private Cart cart;
+    @MapsId("userId")
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @ManyToOne
     @MapsId("productId")
     @JoinColumn(name = "product_id")
     private Product product;
+
+    @ManyToOne
+    @JoinColumn(name = "cart_id")
+    private Cart cart;
 }
