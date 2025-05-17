@@ -17,7 +17,6 @@ public class ProfilePicture {
     private UUID objectId;
 
     @OneToOne
-    @MapsId
     @JoinColumn(name = "user_id")
     private User user;
 }
