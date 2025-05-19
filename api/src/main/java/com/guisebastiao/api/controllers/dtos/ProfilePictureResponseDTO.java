@@ -1,6 +1,9 @@
 package com.guisebastiao.api.controllers.dtos;
 
+import java.util.UUID;
+
 public record ProfilePictureDTO(
-        String profilePictureUrl
+        UUID id,
+        String url
 ) {
 }
